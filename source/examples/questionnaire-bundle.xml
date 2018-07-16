@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="cf-1531101177536" />
+  <type value="searchset" />
+  <total value="2" />
+  <link>
+    <relation value="self" />
+    <url value="http://hapi.fhir.org/baseDstu3/Questionnaire?_pretty=true" />
+  </link>
+  <link>
+    <relation value="next" />
+    <url value="http://hapi.fhir.org/baseDstu3?_getpages=cf-1531101177536&amp;_getpagesoffset=20&amp;_count=20&amp;_pretty=true&amp;_bundletype=searchset" />
+  </link>
+  <entry>
+    <fullUrl value="http://hapi.fhir.org/baseDstu3/Questionnaire/cf-1530786012384" />
+    <resource>
+      <Questionnaire>
+        <id value="cf-1530786012384" />
+        <text>
+          <status value="generated" />
+          <div xmlns="http://www.w3.org/1999/xhtml">Demographics Questionnaire<a name="mm" /></div>
+        </text>
+        <contained>
+          <ValueSet>
+            <id value="gender" />
+            <identifier>
+              <system value="http://hl7.org" />
+              <value value="http://hl7.org/fhir/administrative-gender" />
+            </identifier>
+            <name value="Administrative Gender" />
+            <status value="active" />
+            <description value="Gender" />
+            <compose>
+              <include>
+                <system value="http://hl7.org" />
+                <concept>
+                  <code value="male" />
+                  <display value="male" />
+                </concept>
+                <concept>
+                  <code value="female" />
+                  <display value="female" />
+                </concept>
+                <concept>
+                  <code value="other" />
+                  <display value="Other" />
+                </concept>
+                <concept>
+                  <code value="unknown" />
+                  <display value="Unknown" />
+                </concept>
+              </include>
+            </compose>
+          </ValueSet>
+        </contained>
+        <url value="http://hapi.fhir.org/baseDstu3/Questionnaire/cf-1530786012384" />
+        <identifier>
+          <value value="awh-questionnaire-demographics" />
+        </identifier>
+        <version value="0.0.1" />
+        <name value="Demographics Questionnaire" />
+        <title value="Demographics Questionnaire" />
+        <status value="active" />
+        <experimental value="false" />
+        <date value="2018-07-03" />
+        <publisher value="Allied World Healthcare" />
+        <description value="Questionnaire for Person Demographics" />
+        <purpose value="Questionnaire for Person Demographics" />
+        <approvalDate value="2018-07-03" />
+        <lastReviewDate value="2018-07-03" />
+        <effectivePeriod>
+          <start value="2018-07-03" />
+          <end value="2019-07-03" />
+        </effectivePeriod>
+        <copyright value="Creative Commons" />
+        <subjectType value="Patient" />
+        <subjectType value="Person" />
+        <subjectType value="RelatedPerson" />
+        <item>
+          <linkId value="0" />
+          <text value="name" />
+          <type value="group" />
+          <item>
+            <linkId value="0.1" />
+            <text value="official" />
+            <type value="string" />
+            <required value="false" />
+            <maxLength value="20" />
+            <initialString value="official" />
+          </item>
+          <item>
+            <linkId value="0.2" />
+            <text value="family" />
+            <type value="string" />
+            <required value="true" />
+            <maxLength value="20" />
+          </item>
+          <item>
+            <linkId value="0.3" />
+            <text value="given" />
+            <type value="string" />
+            <required value="true" />
+            <maxLength value="20" />
+          </item>
+        </item>
+        <item>
+          <linkId value="1" />
+          <text value="telecom" />
+          <type value="group" />
+          <item>
+            <linkId value="1.1" />
+            <text value="system" />
+            <type value="string" />
+            <required value="false" />
+            <readOnly value="true" />
+            <maxLength value="20" />
+            <initialString value="phone" />
+          </item>
+          <item>
+            <linkId value="1.2" />
+            <text value="value" />
+            <type value="string" />
+            <required value="false" />
+            <maxLength value="20" />
+          </item>
+          <item>
+            <linkId value="1.3" />
+            <text value="use" />
+            <type value="string" />
+            <required value="false" />
+            <readOnly value="true" />
+            <maxLength value="20" />
+            <initialString value="work" />
+          </item>
+        </item>
+        <item>
+          <linkId value="2" />
+          <text value="what is your gender" />
+          <type value="choice" />
+          <required value="true" />
+          <options>
+            <reference value="#gender" />
+          </options>
+        </item>
+        <item>
+          <linkId value="3" />
+          <text value="birthDate" />
+          <type value="date" />
+          <required value="false" />
+        </item>
+        <item>
+          <linkId value="4" />
+          <text value="active" />
+          <type value="boolean" />
+          <required value="false" />
+        </item>
+        <item>
+          <linkId value="5" />
+          <text value="address" />
+          <type value="group" />
+          <item>
+            <linkId value="5.1" />
+            <text value="use" />
+            <type value="string" />
+            <required value="false" />
+            <readOnly value="true" />
+            <maxLength value="20" />
+            <initialString value="home" />
+          </item>
+          <item>
+            <linkId value="5.2" />
+            <text value="line" />
+            <type value="string" />
+            <required value="false" />
+            <maxLength value="20" />
+          </item>
+          <item>
+            <linkId value="5.3" />
+            <text value="city" />
+            <type value="string" />
+            <required value="false" />
+            <maxLength value="20" />
+          </item>
+          <item>
+            <linkId value="5.4" />
+            <text value="state" />
+            <type value="string" />
+            <required value="false" />
+            <maxLength value="20" />
+          </item>
+          <item>
+            <linkId value="5.5" />
+            <text value="postalCode" />
+            <type value="integer" />
+            <required value="false" />
+            <maxLength value="20" />
+          </item>
+        </item>
+        <item>
+          <linkId value="6" />
+          <text value="link" />
+          <type value="group" />
+          <item>
+            <linkId value="6.1" />
+            <text value="target" />
+            <type value="group" />
+            <item>
+              <linkId value="6.1.1" />
+              <text value="Person" />
+              <type value="reference" />
+            </item>
+            <item>
+              <linkId value="6.1.2" />
+              <text value="display" />
+              <type value="string" />
+              <required value="false" />
+              <maxLength value="20" />
+            </item>
+          </item>
+        </item>
+      </Questionnaire>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hapi.fhir.org/baseDstu3/Questionnaire/cf-1531101158261" />
+    <resource>
+      <Questionnaire>
+        <id value="cf-1531101158261" />
+        <text>
+          <status value="generated" />
+          <div xmlns="http://www.w3.org/1999/xhtml">Maternal and Child Questions<a name="mm" /></div>
+        </text>
+        <contained>
+          <ValueSet>
+            <id value="reference-contained-options" />
+            <identifier>
+              <system value="http://hl7.org" />
+              <value value="http://hl7.org/fhir/administrative-gender" />
+            </identifier>
+            <name value="Administrative Gender" />
+            <status value="active" />
+            <description value="Gender" />
+            <compose>
+              <include>
+                <system value="http://hl7.org" />
+                <concept>
+                  <code value="option 1" />
+                  <display value="option 1" />
+                </concept>
+                <concept>
+                  <code value="option 2" />
+                  <display value="option 2" />
+                </concept>
+              </include>
+            </compose>
+          </ValueSet>
+        </contained>
+        <url value="http://hapi.fhir.org/baseDstu3/Questionnaire/cf-1531101158261" />
+        <identifier>
+          <value value="awh-questionnaire-maternalandchild" />
+        </identifier>
+        <version value="0.0.1" />
+        <name value="Maternal and Child Questionnaire" />
+        <title value="Maternal and Child Questionnaire" />
+        <status value="active" />
+        <experimental value="false" />
+        <date value="2018-07-03" />
+        <publisher value="Allied World Healthcare" />
+        <description value="Questionnaire for  Maternal and Child" />
+        <purpose value="Questionnaire for Maternal and Child" />
+        <approvalDate value="2018-07-03" />
+        <lastReviewDate value="2018-07-03" />
+        <effectivePeriod>
+          <start value="2018-07-03" />
+          <end value="2019-07-03" />
+        </effectivePeriod>
+        <copyright value="Creative Commons" />
+        <subjectType value="Patient" />
+        <subjectType value="Person" />
+        <subjectType value="RelatedPerson" />
+        <item>
+          <linkId value="110" />
+          <prefix value="a." />
+          <text value="This is the generic meta-data of an item?" />
+          <type value="string" />
+          <required value="false" />
+          <repeats value="false" />
+          <readOnly value="false" />
+          <maxLength value="20" />
+          <initialString value="default value" />
+        </item>
+        <item>
+          <linkId value="11" />
+          <text value="This is a question with integer answer?" />
+          <type value="integer" />
+          <required value="true" />
+        </item>
+        <item>
+          <linkId value="12" />
+          <text value="This is a question with a default integer answer?" />
+          <type value="integer" />
+          <required value="true" />
+          <initialInteger value="1" />
+        </item>
+        <item>
+          <linkId value="13" />
+          <text value="This is a question with decimal answer?" />
+          <type value="decimal" />
+          <required value="true" />
+        </item>
+        <item>
+          <linkId value="14" />
+          <text value="This is a question with a default decimal answer?" />
+          <type value="decimal" />
+          <required value="true" />
+          <initialDecimal value="1.01" />
+        </item>
+        <item>
+          <linkId value="10" />
+          <text value="This is a question with string answer?" />
+          <type value="string" />
+          <required value="true" />
+          <readOnly value="false" />
+          <maxLength value="20" />
+        </item>
+        <item>
+          <linkId value="20" />
+          <text value="This is a question with default string value?" />
+          <type value="string" />
+          <required value="false" />
+          <maxLength value="20" />
+          <initialString value="this is a default string value" />
+        </item>
+        <item>
+          <linkId value="60" />
+          <text value="This is a question with boolean answer?" />
+          <type value="boolean" />
+          <required value="false" />
+        </item>
+        <item>
+          <linkId value="23" />
+          <text value="This is a question with default boolean value?" />
+          <type value="string" />
+          <required value="false" />
+          <maxLength value="10" />
+          <initialBoolean value="true" />
+        </item>
+        <item>
+          <linkId value="50" />
+          <text value="This is a question with birthdate answer?" />
+          <type value="date" />
+          <required value="false" />
+        </item>
+        <item>
+          <linkId value="0" />
+          <text value="This is a question with grouping?" />
+          <type value="group" />
+          <item>
+            <linkId value="0.1" />
+            <text value="this is a 1st question within a group?" />
+            <type value="string" />
+            <required value="false" />
+            <maxLength value="20" />
+            <initialString value="official" />
+          </item>
+          <item>
+            <linkId value="0.2" />
+            <text value="this is a 2nd question within a group?" />
+            <type value="string" />
+            <required value="true" />
+            <maxLength value="20" />
+          </item>
+        </item>
+        <item>
+          <linkId value="210" />
+          <text value="This is a multiple question (radio button) with external referenced options?" />
+          <type value="open-choice" />
+          <options>
+            <reference value="http://hl7.org/fhir/ValueSet/administrative-gender" />
+          </options>
+        </item>
+        <item>
+          <linkId value="21" />
+          <text value="This is a multiple question (checkbox) with external referenced options?" />
+          <type value="choice" />
+          <options>
+            <reference value="http://hl7.org/fhir/ValueSet/administrative-gender" />
+          </options>
+        </item>
+        <item>
+          <linkId value="40" />
+          <text value="This is a multiple question (radio botton) with contained referenced options?" />
+          <type value="choice" />
+          <options>
+            <reference value="#reference-contained-options" />
+          </options>
+        </item>
+        <item>
+          <linkId value="41" />
+          <text value="This is a multiple question (radio botton) with embedded options?" />
+          <type value="choice" />
+          <option>
+            <valueCoding>
+              <system value="http://hl7.org" />
+              <code value="option 1" />
+              <display value="option 1" />
+            </valueCoding>
+          </option>
+          <option>
+            <valueCoding>
+              <system value="http://hl7.org" />
+              <code value="option 2" />
+              <display value="option 2" />
+            </valueCoding>
+          </option>
+        </item>
+        <item>
+          <linkId value="22" />
+          <text value="This is a string question with dependency to the embedded options value?" />
+          <type value="string" />
+          <enableWhen>
+            <question value="41" />
+            <answerCoding>
+              <system value="http://hl7.org" />
+              <code value="option 2" />
+              <display value="option 2" />
+            </answerCoding>
+          </enableWhen>
+          <required value="false" />
+          <maxLength value="20" />
+        </item>
+        <item>
+          <linkId value="24" />
+          <text value="This is a string question with dependency to string question?" />
+          <type value="string" />
+          <enableWhen>
+            <question value="10" />
+            <hasAnswer value="true" />
+          </enableWhen>
+          <required value="false" />
+          <maxLength value="20" />
+        </item>
+        <item>
+          <linkId value="240" />
+          <text value="This is a string question with dependency to boolean question?" />
+          <type value="string" />
+          <enableWhen>
+            <question value="60" />
+            <hasAnswer value="true" />
+          </enableWhen>
+          <required value="false" />
+          <maxLength value="20" />
+        </item>
+        <item>
+          <linkId value="25" />
+          <text value="This is a multiple question (radio button) with dependency  to the embedded options value?" />
+          <type value="choice" />
+          <enableWhen>
+            <question value="41" />
+            <answerCoding>
+              <system value="http://hl7.org" />
+              <code value="option 2" />
+              <display value="option 2" />
+            </answerCoding>
+          </enableWhen>
+          <options>
+            <reference value="#reference-contained-options" />
+          </options>
+        </item>
+      </Questionnaire>
+    </resource>
+  </entry>
+</Bundle>

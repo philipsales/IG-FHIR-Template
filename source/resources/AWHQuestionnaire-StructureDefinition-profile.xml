@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="awh-questionnaire-basic"/>
+  <meta>
+    <versionId value="7" />
+    <lastUpdated value="2018-06-24T12:32:43.633+00:00" />
+  </meta>
+  <version value="0.0.2" />
+  <url value="http://awh.fhir.ph/fhir/StructureDefinition/awh-questionnaire-basic" />
+  <name value="Questionnaire" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Questionnaire" />
+  <title value="Questionnaire AWH" />
+  <derivation value="constraint" />
+  <date value="2018-06-24T12:44:43.479Z" />
+  <publisher value="Allied World Healthcare: Innovation Labs" />
+  <description value="Person Profile for Allied World Healthcare" />
+  <purpose value="AWH Person Profile" />
+  <copyright value="Creative Commons &quot;No Rights Reserved&quot;" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Questionnaire" />
+  <differential>
+    <element id="Questionnaire.experimental">
+      <path value="Questionnaire.experimental" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

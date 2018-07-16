@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="awh-person-basic"/>
+  <meta>
+    <versionId value="7" />
+    <lastUpdated value="2018-06-24T12:32:43.633+00:00" />
+  </meta>
+  <url value="http://awh.fhir.ph/fhir/StructureDefinition/awh-person-basic" />
+  <version value="0.0.2" />
+  <name value="Person" />
+  <title value="Person AWH" />
+  <status value="draft" />
+  <date value="2018-06-24T12:44:43.479Z" />
+  <publisher value="Allied World Healthcare: Innovation Labs" />
+  <description value="Person Profile for Allied World Healthcare" />
+  <purpose value="AWH Person Profile" />
+  <copyright value="Creative Commons &quot;No Rights Reserved&quot;" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Person" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Person" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Person.implicitRules">
+      <path value="Person.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Person.identifier">
+      <path value="Person.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="exists" />
+          <path value="value" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Person.identifier:UMID">
+      <path value="Person.identifier" />
+      <sliceName value="UMID" />
+      <alias value="BSN" />
+      <max value="1" />
+    </element>
+    <element id="Person.identifier:UMID.system">
+      <path value="Person.identifier.system" />
+      <fixedUri value="http://awh.fhir.ph/fhir/NamingSystem/umid" />
+      <example>
+        <label value="UMID number" />
+        <valueUri value="123456" />
+      </example>
+    </element>
+    <element id="Person.identifier:UMID.value">
+      <path value="Person.identifier.value" />
+      <min value="1" />
+      <example>
+        <label value="UMID number" />
+        <valueString value="123456" />
+      </example>
+      <maxLength value="6" />
+    </element>
+    <element id="Person.link">
+      <path value="Person.link" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
